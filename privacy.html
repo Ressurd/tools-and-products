@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Tools &amp; Products</title>
+  <meta
+    name="description"
+    content="Privacy policy for Tools & Products, including support pages and lightweight Chrome extension products."
+  >
+  <style>
+    :root {
+      --bg: #111315;
+      --panel: rgba(255, 255, 255, 0.05);
+      --panel-strong: rgba(255, 255, 255, 0.08);
+      --text: #f3f4f6;
+      --muted: #a5adb8;
+      --line: rgba(255, 255, 255, 0.09);
+      --accent: #d8e2ff;
+      --button: #f3f4f6;
+      --button-text: #111315;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --container: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(119, 138, 168, 0.16), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.07), transparent 28%),
+        linear-gradient(180deg, #0e1012 0%, #14171b 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 72px 0 26px;
+    }
+
+    .hero-panel,
+    .section-card,
+    .footer-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel {
+      padding: 36px;
+      border-radius: var(--radius-xl);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .policy {
+      display: grid;
+      gap: 18px;
+      padding-bottom: 22px;
+    }
+
+    .section-card {
+      padding: 26px;
+    }
+
+    .section-card h2 {
+      margin: 0 0 12px;
+      font-size: 1.12rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-card p,
+    .section-card li {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .section-card p {
+      margin: 0;
+    }
+
+    .section-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .section-card li + li {
+      margin-top: 8px;
+    }
+
+    .footer {
+      padding: 8px 0 72px;
+    }
+
+    .footer-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 22px 24px;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer-copy strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: transform 180ms ease, opacity 180ms ease, border-color 180ms ease;
+    }
+
+    .button.primary {
+      background: var(--button);
+      color: var(--button-text);
+    }
+
+    .button.secondary {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .note {
+      padding-top: 6px;
+      color: #7f8894;
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .footer-panel {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--container));
+      }
+
+      .hero-panel,
+      .section-card,
+      .footer-panel {
+        padding: 22px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-panel">
+        <div class="eyebrow">Official Privacy Policy</div>
+        <h1>Privacy Policy</h1>
+        <p class="intro">
+          This policy applies to the Tools &amp; Products support pages and related lightweight products, including WebClip, YouTube Shorts Workflow, and associated product resources.
+        </p>
+      </div>
+    </section>
+
+    <section class="policy" aria-label="Privacy policy sections">
+      <article class="section-card">
+        <h2>Effective Date</h2>
+        <p>April 20, 2026</p>
+      </article>
+
+      <article class="section-card">
+        <h2>Overview</h2>
+        <p>
+          This site is used as an official product hub and support page. It provides product links, public support information, and privacy information for related tools and product listings.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Information You Provide</h2>
+        <ul>
+          <li>If you contact by email, your email address and message content may be used to respond to your request.</li>
+          <li>If you join a waitlist or submit a form, the information you choose to provide may be used for updates, product communication, or support follow-up.</li>
+          <li>This site does not include analytics scripts, ad trackers, or embedded third-party UI libraries.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Product Data and Local Storage</h2>
+        <ul>
+          <li>Some products may store user-created content such as notes, tags, settings, saved references, or workflow state in browser-provided storage to make the product function.</li>
+          <li>Data handling can vary by product and feature. Product-specific behavior should be interpreted together with the product listing and in-product notices.</li>
+          <li>Backup, restore, export, or similar actions may depend on choices made by the user inside the product.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Third-Party Services</h2>
+        <ul>
+          <li>This site links to external services such as the Chrome Web Store, Google Forms, Gumroad, and YouTube.</li>
+          <li>Those services operate under their own terms and privacy policies.</li>
+          <li>When you leave this site and use an external service, that service is responsible for its own data handling.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Policy Updates</h2>
+        <p>
+          This privacy policy may be updated from time to time to reflect product changes, support workflow changes, or public listing requirements. The effective date at the top of this page will be updated when material revisions are made.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Contact</h2>
+        <p>
+          For privacy or support questions, contact <a href="mailto:ressurd@gmail.com">ressurd@gmail.com</a>.
+        </p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-panel">
+        <div class="footer-copy">
+          <strong>Tools &amp; Products</strong>
+          Use this page as the public privacy policy link for GitHub Pages, product support, and Chrome Web Store references.
+        </div>
+        <div class="actions">
+          <a class="button primary" href="./index.html">Back to Hub</a>
+          <a class="button secondary" href="mailto:ressurd@gmail.com">Contact</a>
+        </div>
+      </div>
+      <p class="note">&#169; 2026 Tools &amp; Products</p>
+    </footer>
+  </main>
+</body>
+</html>
