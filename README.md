@@ -15,7 +15,7 @@ https://forms.gle/i4zj5ZPQDYL55UKn6
 A Chrome extension for making YouTube Shorts on the web less repetitive with auto-next, progress jump, draft overlay, and saved Shorts tools.
 
 Chrome Web Store:
-[Shorts 스토어 링크]
+https://chromewebstore.google.com/detail/youtube-shorts-workflow/fbejpglnkpokoklbcoagdoolihgkpokg?authuser=0
 
 ## Chrome Extension Submission Pack
 Templates and checklists for preparing and submitting an MV3 Chrome extension to the Chrome Web Store.
