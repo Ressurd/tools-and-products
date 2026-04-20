@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools & Products</title>
+  <meta
+    name="description"
+    content="Small tools and products built around Chrome extensions, workflow, and lightweight productivity."
+  >
+  <style>
+    :root {
+      --bg: #111315;
+      --bg-soft: #181b1f;
+      --panel: rgba(255, 255, 255, 0.05);
+      --panel-strong: rgba(255, 255, 255, 0.08);
+      --text: #f3f4f6;
+      --muted: #a5adb8;
+      --line: rgba(255, 255, 255, 0.09);
+      --accent: #d8e2ff;
+      --accent-strong: #ffffff;
+      --button: #f3f4f6;
+      --button-text: #111315;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --container: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(119, 138, 168, 0.16), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.07), transparent 28%),
+        linear-gradient(180deg, #0e1012 0%, #14171b 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 88px 0 36px;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025));
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -55% auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      max-width: 9ch;
+      font-size: clamp(2.6rem, 7vw, 4.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      padding: 8px 0 24px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.16);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    }
+
+    .card-tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .card ul {
+      margin: 0 0 24px;
+      padding-left: 18px;
+      color: #d7dde5;
+      line-height: 1.7;
+    }
+
+    .card li + li {
+      margin-top: 6px;
+    }
+
+    .actions {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: transform 180ms ease, opacity 180ms ease, border-color 180ms ease;
+    }
+
+    .button.primary {
+      background: var(--button);
+      color: var(--button-text);
+    }
+
+    .button.secondary {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .footer {
+      padding: 18px 0 72px;
+    }
+
+    .footer-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer-copy strong {
+      display: block;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      color: #7f8894;
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding-top: 64px;
+      }
+
+      .hero-panel {
+        padding: 28px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-panel {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--container));
+      }
+
+      .hero-panel,
+      .card,
+      .footer-panel {
+        padding: 22px;
+      }
+
+      .intro,
+      .card p,
+      .card ul,
+      .footer-copy {
+        font-size: 0.98rem;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero reveal">
+      <div class="hero-panel">
+        <div class="eyebrow">Official Links Hub</div>
+        <h1>Tools &amp; Products</h1>
+        <p class="intro">
+          Small tools and products built around Chrome extensions, workflow, and lightweight productivity.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Product cards">
+      <article class="card reveal">
+        <span class="card-tag">Chrome Extension</span>
+        <h2>WebClip</h2>
+        <p>
+          Save pages with tags and notes, search them later, filter by top tags, and backup or restore locally.
+        </p>
+        <ul>
+          <li>Save pages with notes and custom tags</li>
+          <li>Search clips and browse by top tags</li>
+          <li>Backup and restore data locally</li>
+        </ul>
+        <div class="actions">
+          <a
+            class="button primary"
+            href="https://chromewebstore.google.com/detail/webclip/dfdhpnklkfbabgjghpfgdjjbfcjojaho?authuser=0&amp;hl=ko"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open WebClip
+          </a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <span class="card-tag">Workflow Tool</span>
+        <h2>YouTube Shorts Workflow</h2>
+        <p>
+          A Chrome extension to make YouTube Shorts on the web less repetitive with faster browsing and draft support.
+        </p>
+        <ul>
+          <li>Auto-next for repeated Shorts browsing</li>
+          <li>Progress jump and draft overlay tools</li>
+          <li>Saved Shorts utilities for repeat work</li>
+        </ul>
+        <div class="actions">
+          <a
+            class="button primary"
+            href="https://chromewebstore.google.com/detail/youtube-shorts-workflow/fbejpglnkpokoklbcoagdoolihgkpokg?authuser=0"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Workflow
+          </a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <span class="card-tag">Submission Resource</span>
+        <h2>Chrome Extension Submission Pack</h2>
+        <p>
+          Templates and checklists for preparing and submitting an MV3 Chrome extension to the Chrome Web Store.
+        </p>
+        <ul>
+          <li>Submission templates for common store assets</li>
+          <li>Checklists for MV3 prep and review steps</li>
+          <li>Built for smoother Chrome Web Store submission</li>
+        </ul>
+        <div class="actions">
+          <a
+            class="button primary"
+            href="https://ressurected.gumroad.com/l/ecbpxc"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Pack
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer reveal">
+      <div class="footer-panel">
+        <div class="footer-copy">
+          <strong>Want early access or updates?</strong>
+          Join the WebClip waitlist for upcoming improvements and related tools.
+        </div>
+        <a
+          class="button secondary"
+          href="https://forms.gle/i4zj5ZPQDYL55UKn6"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Join Waitlist
+        </a>
+      </div>
+      <p class="footer-note">© <span id="year"></span> Tools &amp; Products</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+  </script>
+</body>
+</html>
