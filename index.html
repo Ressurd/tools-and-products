@@ -6,7 +6,7 @@
   <title>Tools & Products</title>
   <meta
     name="description"
-    content="Small tools and products built around Chrome extensions, workflow, and lightweight productivity."
+    content="Official product hub and support page for lightweight tools built around Chrome extensions, workflow, and productivity."
   >
   <style>
     :root {
@@ -204,6 +204,117 @@
       opacity: 0.96;
     }
 
+    .support-section {
+      padding: 10px 0 18px;
+    }
+
+    .support-panel {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.025));
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    .section-heading {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-copy {
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .support-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .support-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.02rem;
+      letter-spacing: -0.02em;
+    }
+
+    .support-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.025);
+      color: #e5e7eb;
+      transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .text-link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .text-link::after {
+      content: "Open";
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .meta-line {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .meta-label {
+      color: #d7dde5;
+      font-size: 0.9rem;
+    }
+
+    .meta-value {
+      color: var(--muted);
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .meta-value a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.3);
+      text-underline-offset: 3px;
+    }
+
     .footer {
       padding: 18px 0 72px;
     }
@@ -262,6 +373,10 @@
         grid-template-columns: 1fr;
       }
 
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
       .footer-panel {
         flex-direction: column;
         align-items: flex-start;
@@ -275,6 +390,8 @@
 
       .hero-panel,
       .card,
+      .support-panel,
+      .support-card,
       .footer-panel {
         padding: 22px;
       }
@@ -282,6 +399,8 @@
       .intro,
       .card p,
       .card ul,
+      .section-copy,
+      .support-card p,
       .footer-copy {
         font-size: 0.98rem;
       }
@@ -296,7 +415,7 @@
   <main class="shell">
     <section class="hero reveal">
       <div class="hero-panel">
-        <div class="eyebrow">Official Links Hub</div>
+        <div class="eyebrow">Official Product Hub</div>
         <h1>Tools &amp; Products</h1>
         <p class="intro">
           Small tools and products built around Chrome extensions, workflow, and lightweight productivity.
@@ -375,6 +494,85 @@
       </article>
     </section>
 
+    <section class="support-section reveal" id="support" aria-label="Support and information">
+      <div class="support-panel">
+        <h2 class="section-heading">Support</h2>
+        <p class="section-copy">
+          This page works as the official hub for product access, updates, support references, and public contact details.
+        </p>
+
+        <div class="support-grid">
+          <article class="support-card">
+            <h3>Product Links</h3>
+            <div class="link-list">
+              <a
+                class="text-link"
+                href="https://chromewebstore.google.com/detail/webclip/dfdhpnklkfbabgjghpfgdjjbfcjojaho?authuser=0&amp;hl=ko"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WebClip Store
+              </a>
+              <a
+                class="text-link"
+                href="https://forms.gle/i4zj5ZPQDYL55UKn6"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WebClip Waitlist
+              </a>
+              <a
+                class="text-link"
+                href="https://chromewebstore.google.com/detail/youtube-shorts-workflow/fbejpglnkpokoklbcoagdoolihgkpokg?authuser=0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                YouTube Shorts Workflow Store
+              </a>
+              <a
+                class="text-link"
+                href="https://ressurected.gumroad.com/l/ecbpxc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Submission Pack Gumroad
+              </a>
+            </div>
+          </article>
+
+          <article class="support-card" id="contact">
+            <h3>Contact</h3>
+            <p>
+              Use the contact address below for support requests, product questions, or store-related communication.
+            </p>
+            <div class="meta-list">
+              <div class="meta-line">
+                <span class="meta-label">Email</span>
+                <span class="meta-value">
+                  <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article class="support-card" id="privacy">
+            <h3>Privacy</h3>
+            <p>
+              A public privacy policy link can be added here for Chrome Web Store listings, support pages, and product trust signals.
+            </p>
+            <div class="meta-list">
+              <div class="meta-line">
+                <span class="meta-label">Privacy Policy</span>
+                <span class="meta-value">
+                  <a href="YOUR_PRIVACY_POLICY_URL" target="_blank" rel="noreferrer">YOUR_PRIVACY_POLICY_URL</a>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer reveal">
       <div class="footer-panel">
         <div class="footer-copy">
@@ -390,7 +588,7 @@
           Join Waitlist
         </a>
       </div>
-      <p class="footer-note">© <span id="year"></span> Tools &amp; Products</p>
+      <p class="footer-note">&#169; <span id="year"></span> Tools &amp; Products</p>
     </footer>
   </main>
 
