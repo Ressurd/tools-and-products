@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Tools &amp; Products</title>
+  <title>Privacy Policy | Tab Session Manager</title>
   <meta
     name="description"
-    content="Privacy policy for Tools & Products, including support pages and lightweight Chrome extension products."
+    content="Privacy policy for Tab Session Manager, a Chrome extension that stores saved tab sessions locally in the user's browser."
   >
   <style>
     :root {
@@ -28,6 +28,10 @@
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -65,8 +69,21 @@
     }
 
     .hero-panel {
+      position: relative;
+      overflow: hidden;
       padding: 36px;
       border-radius: var(--radius-xl);
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -55% auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 68%);
+      pointer-events: none;
     }
 
     .eyebrow {
@@ -84,17 +101,37 @@
 
     h1 {
       margin: 18px 0 12px;
+      max-width: 12ch;
       font-size: clamp(2.4rem, 6vw, 4.2rem);
       line-height: 1;
       letter-spacing: -0.04em;
     }
 
     .intro {
-      max-width: 720px;
+      max-width: 740px;
       margin: 0;
       color: var(--muted);
       line-height: 1.75;
       font-size: 1.05rem;
+    }
+
+    .quick-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.035);
+      color: #d7dde5;
+      font-size: 0.93rem;
     }
 
     .policy {
@@ -123,6 +160,10 @@
       margin: 0;
     }
 
+    .section-card p + p {
+      margin-top: 12px;
+    }
+
     .section-card ul {
       margin: 0;
       padding-left: 18px;
@@ -130,6 +171,18 @@
 
     .section-card li + li {
       margin-top: 8px;
+    }
+
+    .section-card strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .inline-link {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.3);
+      text-underline-offset: 3px;
     }
 
     .footer {
@@ -214,6 +267,13 @@
         padding: 22px;
       }
 
+      .intro,
+      .section-card p,
+      .section-card li,
+      .footer-copy {
+        font-size: 0.98rem;
+      }
+
       .button {
         width: 100%;
       }
@@ -227,62 +287,91 @@
         <div class="eyebrow">Official Privacy Policy</div>
         <h1>Privacy Policy</h1>
         <p class="intro">
-          This policy applies to the Tools &amp; Products support pages and related lightweight products, including WebClip, YouTube Shorts Workflow, and associated product resources.
+          This privacy policy describes how Tab Session Manager handles data. Tab Session Manager is a Chrome extension for saving, searching, editing, exporting, importing, and restoring browser tab sessions.
         </p>
+        <div class="quick-meta" aria-label="Policy summary">
+          <span class="meta-pill">Product: Tab Session Manager</span>
+          <span class="meta-pill">Storage: Local browser storage</span>
+          <span class="meta-pill">Last updated: April 23, 2026</span>
+        </div>
       </div>
     </section>
 
     <section class="policy" aria-label="Privacy policy sections">
       <article class="section-card">
-        <h2>Effective Date</h2>
-        <p>April 20, 2026</p>
-      </article>
-
-      <article class="section-card">
-        <h2>Overview</h2>
+        <h2>Title</h2>
         <p>
-          This site is used as an official product hub and support page. It provides product links, public support information, and privacy information for related tools and product listings.
+          Privacy Policy for <strong>Tab Session Manager</strong>.
+        </p>
+        <p>
+          This page is intended for use as the public privacy policy URL for the Chrome Web Store listing and related product support references. The structure may be reused for related products when the product name, features, permissions, and stored data are updated to match the actual implementation.
         </p>
       </article>
 
       <article class="section-card">
-        <h2>Information You Provide</h2>
-        <ul>
-          <li>If you contact by email, your email address and message content may be used to respond to your request.</li>
-          <li>If you join a waitlist or submit a form, the information you choose to provide may be used for updates, product communication, or support follow-up.</li>
-          <li>This site does not include analytics scripts, ad trackers, or embedded third-party UI libraries.</li>
-        </ul>
+        <h2>Last updated</h2>
+        <p>April 23, 2026</p>
       </article>
 
       <article class="section-card">
-        <h2>Product Data and Local Storage</h2>
-        <ul>
-          <li>Some products may store user-created content such as notes, tags, settings, saved references, or workflow state in browser-provided storage to make the product function.</li>
-          <li>Data handling can vary by product and feature. Product-specific behavior should be interpreted together with the product listing and in-product notices.</li>
-          <li>Backup, restore, export, or similar actions may depend on choices made by the user inside the product.</li>
-        </ul>
-      </article>
-
-      <article class="section-card">
-        <h2>Third-Party Services</h2>
-        <ul>
-          <li>This site links to external services such as the Chrome Web Store, Google Forms, Gumroad, and YouTube.</li>
-          <li>Those services operate under their own terms and privacy policies.</li>
-          <li>When you leave this site and use an external service, that service is responsible for its own data handling.</li>
-        </ul>
-      </article>
-
-      <article class="section-card">
-        <h2>Policy Updates</h2>
+        <h2>What data is stored</h2>
         <p>
-          This privacy policy may be updated from time to time to reflect product changes, support workflow changes, or public listing requirements. The effective date at the top of this page will be updated when material revisions are made.
+          Tab Session Manager stores data that is needed to save and restore tab sessions created by the user. Depending on how the user uses the extension, this may include:
         </p>
+        <ul>
+          <li>Session titles entered or edited by the user</li>
+          <li>Tags and notes added by the user</li>
+          <li>Tab titles, tab URLs, and favicon URLs for saved sessions</li>
+          <li>Timestamps related to saved or updated sessions</li>
+          <li>Window counts and tab counts for saved sessions</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>How data is used</h2>
+        <p>
+          Stored data is used only to provide the extension's session management features. These features include saving the current window or all open windows, showing saved sessions, searching saved sessions, editing or deleting saved sessions, restoring sessions in a new window, and restoring sessions in the current window.
+        </p>
+        <p>
+          The extension also supports user-controlled JSON export and import so users can create or restore their own local backups.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Where data is stored</h2>
+        <p>
+          Tab Session Manager stores saved session data in the user's local browser storage using <strong>chrome.storage.local</strong>.
+        </p>
+        <p>
+          The extension does not use cloud sync, does not send saved session data to a remote backend, and does not provide a server-side account system. If a user exports a JSON backup, that exported file is created because the user chose to export it and is handled by the user outside the extension's local storage.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Permissions used</h2>
+        <ul>
+          <li><strong>tabs:</strong> Used to read the currently open tabs and windows when the user saves a session, and to restore saved tabs when the user chooses a restore action.</li>
+          <li><strong>storage:</strong> Used to save, load, edit, delete, export, and import saved session data in local browser storage.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>What is not collected / not used</h2>
+        <ul>
+          <li>No cloud sync is currently provided.</li>
+          <li>No analytics are currently collected by the extension.</li>
+          <li>No advertising identifiers are collected or used.</li>
+          <li>No remote backend is currently used for saved session data.</li>
+          <li>No saved session data is sold.</li>
+          <li>No user account or login system is currently provided.</li>
+        </ul>
       </article>
 
       <article class="section-card">
         <h2>Contact</h2>
         <p>
-          For privacy or support questions, contact <a href="mailto:ressurd@gmail.com">ressurd@gmail.com</a>.
+          For privacy questions, support requests, or Chrome Web Store related communication, contact
+          <a class="inline-link" href="mailto:ressurd@gmail.com">ressurd@gmail.com</a>.
         </p>
       </article>
     </section>
@@ -291,7 +380,7 @@
       <div class="footer-panel">
         <div class="footer-copy">
           <strong>Tools &amp; Products</strong>
-          Use this page as the public privacy policy link for GitHub Pages, product support, and Chrome Web Store references.
+          Public product hub, support, contact, and privacy references for lightweight tools.
         </div>
         <div class="actions">
           <a class="button primary" href="./index.html">Back to Hub</a>
