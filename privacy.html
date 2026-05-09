@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Tab Session Manager</title>
+  <title>Privacy Policy | Tools &amp; Products</title>
   <meta
     name="description"
-    content="Privacy policy for Tab Session Manager, a Chrome extension that stores saved tab sessions locally in the user's browser."
+    content="Privacy policy for Chrome extensions published through the Tools &amp; Products hub, including Tab Session Manager, Quick Tab Cleaner, and Link Inbox."
   >
   <style>
     :root {
@@ -287,12 +287,12 @@
         <div class="eyebrow">Official Privacy Policy</div>
         <h1>Privacy Policy</h1>
         <p class="intro">
-          This privacy policy describes how Tab Session Manager handles data. Tab Session Manager is a Chrome extension for saving, searching, editing, exporting, importing, and restoring browser tab sessions.
+          This privacy policy describes how supported Chrome extensions in the Tools &amp; Products hub handle data, including Tab Session Manager, Quick Tab Cleaner, and Link Inbox.
         </p>
         <div class="quick-meta" aria-label="Policy summary">
-          <span class="meta-pill">Product: Tab Session Manager</span>
-          <span class="meta-pill">Storage: Local browser storage</span>
-          <span class="meta-pill">Last updated: April 23, 2026</span>
+          <span class="meta-pill">Products: Tab Session Manager, Quick Tab Cleaner, Link Inbox</span>
+          <span class="meta-pill">Storage: Local processing and local browser storage</span>
+          <span class="meta-pill">Last updated: May 10, 2026</span>
         </div>
       </div>
     </section>
@@ -301,7 +301,7 @@
       <article class="section-card">
         <h2>Title</h2>
         <p>
-          Privacy Policy for <strong>Tab Session Manager</strong>.
+          Privacy Policy for <strong>Tab Session Manager</strong>, <strong>Quick Tab Cleaner</strong>, and <strong>Link Inbox</strong>.
         </p>
         <p>
           This page is intended for use as the public privacy policy URL for the Chrome Web Store listing and related product support references. The structure may be reused for related products when the product name, features, permissions, and stored data are updated to match the actual implementation.
@@ -310,7 +310,7 @@
 
       <article class="section-card">
         <h2>Last updated</h2>
-        <p>April 23, 2026</p>
+        <p>May 10, 2026</p>
       </article>
 
       <article class="section-card">
@@ -364,6 +364,142 @@
           <li>No remote backend is currently used for saved session data.</li>
           <li>No saved session data is sold.</li>
           <li>No user account or login system is currently provided.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Quick Tab Cleaner</h2>
+        <p>
+          Quick Tab Cleaner is a Chrome extension that helps users review currently open tabs, find exact duplicate URLs, preview duplicate groups, and safely close duplicate tabs after a user action.
+        </p>
+        <p>
+          Quick Tab Cleaner keeps pinned tabs open and keeps active tabs first when possible. It does not close duplicate tabs automatically in the background.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Quick Tab Cleaner data read</h2>
+        <p>
+          Quick Tab Cleaner reads information about currently open Chrome tabs only as needed to calculate and display duplicate tab groups in the popup. This may include:
+        </p>
+        <ul>
+          <li>Tab title</li>
+          <li>Tab URL</li>
+          <li>Domain</li>
+          <li>Window id</li>
+          <li>Tab index</li>
+          <li>Active tab state</li>
+          <li>Pinned tab state</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Quick Tab Cleaner data use</h2>
+        <p>
+          Tab data is used locally in the popup to find duplicate tabs by exact URL, show duplicate group previews, show domain summaries, mark which tabs will stay open, and mark which duplicate tabs will close.
+        </p>
+        <p>
+          Duplicate tabs are closed only after the user chooses a cleanup action, such as cleaning one duplicate group or closing duplicates across all groups.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Quick Tab Cleaner storage</h2>
+        <p>
+          Quick Tab Cleaner does not store tab data in extension storage.
+        </p>
+        <p>
+          The current tab snapshot is processed locally while the popup is open. The extension does not send tab titles, URLs, domains, or tab state to a remote backend.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Quick Tab Cleaner permissions used</h2>
+        <ul>
+          <li><strong>tabs:</strong> Used to read currently open tab metadata, find exact URL duplicates, show duplicate previews, identify active and pinned tabs, and close duplicate tabs after the user chooses a cleanup action.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Quick Tab Cleaner what is not collected / not used</h2>
+        <ul>
+          <li>No cloud sync is currently provided.</li>
+          <li>No analytics are currently collected by the extension.</li>
+          <li>No advertising identifiers are collected or used.</li>
+          <li>No remote backend is currently used.</li>
+          <li>No tab data is stored in extension storage.</li>
+          <li>No tab data or personal data is sold.</li>
+          <li>No automatic background cleanup is performed.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Link Inbox</h2>
+        <p>
+          Link Inbox is a Chrome extension that lets users save the current tab to a local link inbox, manage links as an Inbox / Done queue, search saved links by title or URL, and create or restore JSON backups.
+        </p>
+        <p>
+          Link Inbox stores the current tab only when the user clicks <strong>Save current tab</strong>. It does not automatically collect links in the background.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Link Inbox data read and stored</h2>
+        <p>
+          Link Inbox reads the current tab title, URL, and favicon URL for the popup preview and for the user-triggered save action.
+        </p>
+        <p>
+          Saved Link Inbox records may include:
+        </p>
+        <ul>
+          <li>id</li>
+          <li>title</li>
+          <li>url</li>
+          <li>faviconUrl</li>
+          <li>savedAt</li>
+          <li>status</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Link Inbox data use</h2>
+        <p>
+          Link Inbox uses saved data only to provide the local link queue features selected by the user. These features include showing saved links, marking links as done, moving done links back to the inbox, opening saved links, deleting saved links, searching by title or URL, exporting a JSON backup, and importing a JSON backup.
+        </p>
+        <p>
+          During import, Link Inbox uses exact URL matching to skip duplicate saved links instead of adding the same URL twice.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Link Inbox storage</h2>
+        <p>
+          Link Inbox stores saved link data only in the user's local browser storage using <strong>chrome.storage.local</strong>.
+        </p>
+        <p>
+          JSON export and import are controlled by the user. The extension does not send saved links, tab titles, URLs, or favicon URLs to a remote backend.
+        </p>
+      </article>
+
+      <article class="section-card">
+        <h2>Link Inbox permissions used</h2>
+        <ul>
+          <li><strong>tabs:</strong> Used to read the current active tab title, URL, and favicon URL for the popup preview and user-triggered save action, and to open saved links when the user chooses the Open action.</li>
+          <li><strong>storage:</strong> Used to save, load, update, delete, export, and import Link Inbox data in local browser storage.</li>
+        </ul>
+      </article>
+
+      <article class="section-card">
+        <h2>Link Inbox what is not collected / not used</h2>
+        <ul>
+          <li>No automatic link collection is performed.</li>
+          <li>No full browsing history scan is performed.</li>
+          <li>No page content is collected.</li>
+          <li>No cloud sync is currently provided.</li>
+          <li>No analytics are currently collected by the extension.</li>
+          <li>No advertising identifiers are collected or used.</li>
+          <li>No remote backend is currently used.</li>
+          <li>No saved link data or personal data is sold.</li>
         </ul>
       </article>
 
